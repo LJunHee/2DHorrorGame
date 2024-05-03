@@ -10,7 +10,6 @@ public class Dialogue : MonoBehaviour
     public float textSpeed;
 
     private int index;
-    private bool isTyping;
 
     // Start is called before the first frame update
     void Start()
@@ -33,29 +32,31 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        isTyping = true;
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
-        isTyping = false;
     }
 
     public void NextLine()
     {
-        if (!isTyping)
+        if (index < lines.Length - 1)
         {
-            if (index < lines.Length - 1)
+            if(index == )
             {
                 index++;
                 textComponent.text = string.Empty;
                 StartCoroutine(TypeLine());
-            }
-            else
+            }else
             {
-                gameObject.SetActive(false);
+
             }
+
+        }
+        else
+        {
+            gameObject.SetActive(false);
         }
     }
 }
