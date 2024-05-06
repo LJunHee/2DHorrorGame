@@ -1135,6 +1135,7 @@ MonoBehaviour:
     \uD14C\uC2A4\uD2B8\uC6A9 \uD14C\uC2A4\uD2B8\uC6A9 \uD14C\uC2A4\uD2B8\uC6A9 \uD14C\uC2A4\uD2B8\uC6A9
     \uD14C\uC2A4\uD2B8\uC6A9 \uD14C\uC2A4\uD2B8\uC6A9 \uD14C\uC2A4\uD2B8\uC6A9"
   textSpeed: 0.05
+  index: 0
 --- !u!1 &494931645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,7 +1391,7 @@ MonoBehaviour:
   subpixelMorphologicalAntialiasing:
     quality: 2
   fastApproximateAntialiasing:
-    fastMode: 0
+    fastMode: 1
     keepAlpha: 0
   fog:
     enabled: 1
@@ -1438,7 +1439,7 @@ MonoBehaviour:
   sharedProfile: {fileID: 11400000, guid: 3b6d5ffb00283a54090b81730afd1dfc, type: 2}
   isGlobal: 1
   blendDistance: 0
-  weight: 0.936
+  weight: 1
   priority: 1
 --- !u!1 &640560094
 GameObject:
@@ -4132,7 +4133,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 39.789978, y: -62.550003}
+  m_AnchoredPosition: {x: 39.79004, y: -62.549988}
   m_SizeDelta: {x: -586.03, y: -370.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1660668837
@@ -4156,6 +4157,7 @@ MonoBehaviour:
     \uD14C\uC2A4\uD2B8\uC6A9 \uD14C\uC2A4\uD2B8\uC6A9 \uD14C\uC2A4\uD2B8\uC6A9 \uD14C\uC2A4\uD2B8\uC6A9
     \uD14C\uC2A4\uD2B8\uC6A9 \uD14C\uC2A4\uD2B8\uC6A9 \uD14C\uC2A4\uD2B8\uC6A9"
   textSpeed: 0.05
+  index: 0
 --- !u!114 &1660668838
 MonoBehaviour:
   m_ObjectHideFlags: 0
