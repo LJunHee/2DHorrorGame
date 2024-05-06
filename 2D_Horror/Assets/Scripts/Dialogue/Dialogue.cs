@@ -43,15 +43,9 @@ public class Dialogue : MonoBehaviour
     {
         if (index < lines.Length - 1)
         {
-            if(index == )
-            {
-                index++;
-                textComponent.text = string.Empty;
-                StartCoroutine(TypeLine());
-            }else
-            {
-
-            }
+            index++;
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
 
         }
         else
