@@ -19,7 +19,7 @@ public class ButtonOfDamage : MonoBehaviour
         }
 
         // 클릭된 버튼의 색상을 빨간색으로 변경
-        buttons[buttonNumber].GetComponent<Image>().color = Color.red;
+        /*buttons[buttonNumber].GetComponent<Image>().color = Color.red;*/
 
         // 클릭된 버튼의 번호에 따라 다른 동작 수행
         switch (buttonNumber)
