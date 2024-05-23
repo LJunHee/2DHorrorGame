@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class ButtonOfDamage : MonoBehaviour
 {
     public List<Button> buttons; // 버튼을 담을 리스트 선언
-    public Image hpBar;
-    public Image myhp;
+    public Image NPC_HP;
+    public Image Player_HP;
 
     // 버튼이 클릭될 때 호출되는 함수
     public void OnclickButton(int buttonNumber)
@@ -49,36 +49,39 @@ public class ButtonOfDamage : MonoBehaviour
 
     public void Damage50V() {
         Debug.Log("50V"); // 로그 출력
-        hpBar.fillAmount -= 2f / 100f;
-        myhp.fillAmount -= 2f / 100f;
+        NPC_HP.fillAmount -= 2f / 100f;
+        Player_HP.fillAmount -= 2f / 100f;
     }
     public void Damage100V()
     {
         Debug.Log("100V"); // 로그 출력
-        hpBar.fillAmount -= 5f / 100f;
-        myhp.fillAmount -= 2f / 100f;
+        NPC_HP.fillAmount -= 5f / 100f;
+        Player_HP.fillAmount -= 2f / 100f;
     }
 
     public void Damage200V()
     {
-        hpBar.fillAmount -= 15f / 100f;
-        myhp.fillAmount -= 2f / 100f;
+        NPC_HP.fillAmount -= 15f / 100f;
+        Player_HP.fillAmount -= 2f / 100f;
     }
     public void Damage300V()
     {
-        hpBar.fillAmount -= 30f / 100f;
-        myhp.fillAmount -= 2f / 100f;
+        NPC_HP.fillAmount -= 20f / 100f;
+        Player_HP.fillAmount -= 10f / 100f;
     }
     public void Damage400V()
     {
-        hpBar.fillAmount -= 50f / 100f;
-        myhp.fillAmount -= 2f / 100f;
+        NPC_HP.fillAmount -= 50f / 100f;
+        Player_HP.fillAmount -= 20f / 100f;
     }
     public void Damage500V()
     {
-        hpBar.fillAmount -= 75f / 100f;
-        myhp.fillAmount -= 2f / 100f;
+        NPC_HP.fillAmount -= 75f / 100f;
+        Player_HP.fillAmount -= 35f / 100f;
+
     }
+
+
 
 }
 
