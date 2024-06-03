@@ -1,36 +1,37 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement; // 씬 관리를 위해 추가
 
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
-    public string[] lines;
+    public DialogueData dialogueData; // ScriptableObject를 사용
+    public GameObject Black_Panel; // Black_Panel을 참조
+    public string sceneNameToActivatePanel = "Prologue"; // Black_Panel을 활성화할 씬의 이름
+
     public float textSpeed;
 
     private int index;
-    private bool isTyping; // 타이핑 중인지 여부를 나타내는 변수
+    private bool isTyping;
+    private bool blackPanelActive = false; // Black_Panel 상태를 추적
 
-    // Start is called before the first frame update
     void Start()
     {
         textComponent.text = string.Empty;
         StartDialogue();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // 대화창을 클릭하면 다음 대화로 넘어감
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             NextLine();
         }
     }
 
-    void StartDialogue()
+    public void StartDialogue()
     {
         index = 0;
         StartCoroutine(TypeLine());
@@ -38,30 +39,54 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        isTyping = true; // 타이핑이 시작됨을 나타냄
+        isTyping = true;
+        textComponent.text = string.Empty;
 
-        foreach (char c in lines[index].ToCharArray())
+        string currentLine = dialogueData.lines[index].Replace("\\n", "\n");
+
+        foreach (char c in currentLine)
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
 
-        isTyping = false; // 타이핑이 끝났음을 나타냄
+        isTyping = false;
     }
 
     public void NextLine()
     {
-        if (index < lines.Length - 1)
+        if (index < dialogueData.lines.Length - 1)
         {
             if (isTyping)
             {
-                // 타이핑 중에 클릭되면 타이핑을 멈추고 전체 텍스트를 표시
                 StopAllCoroutines();
-                textComponent.text = lines[index];
-                isTyping = false; // 타이핑이 끝났음을 나타냄
+                textComponent.text = dialogueData.lines[index].Replace("\\n", "\n");
+                isTyping = false;
             }
             else
             {
+                if ((index == 2 || index == 8 || index == 13 || index == 19 || index == 25 || index == 29) && SceneManager.GetActiveScene().name == sceneNameToActivatePanel)
+                {
+                    if (Black_Panel != null)
+                    {
+                        if (!blackPanelActive)
+                        {
+                            Black_Panel.SetActive(true);
+                            blackPanelActive = true;
+                            return; // Black_Panel을 활성화하고 대화 진행을 일시 정지
+                        }
+                        else
+                        {
+                            Black_Panel.SetActive(false);
+                            blackPanelActive = false;
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Black_Panel is not assigned.");
+                    }
+                }
+
                 index++;
                 textComponent.text = string.Empty;
                 StartCoroutine(TypeLine());
@@ -70,6 +95,17 @@ public class Dialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+            if (SceneManager.GetActiveScene().name == sceneNameToActivatePanel)
+            {
+                if (Black_Panel != null)
+                {
+                    Black_Panel.SetActive(true); // 특정 씬에서만 Black_Panel 활성화
+                }
+                else
+                {
+                    Debug.LogWarning("Black_Panel is not assigned.");
+                }
+            }
         }
     }
 }
