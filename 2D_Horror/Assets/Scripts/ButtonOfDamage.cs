@@ -62,22 +62,22 @@ public class ButtonOfDamage : MonoBehaviour
     public void Damage200V()
     {
         NPC_HP.fillAmount -= 15f / 100f;
-        Player_HP.fillAmount -= 2f / 100f;
+        Player_HP.fillAmount -= 4f / 100f;
     }
     public void Damage300V()
     {
-        NPC_HP.fillAmount -= 20f / 100f;
-        Player_HP.fillAmount -= 10f / 100f;
+        NPC_HP.fillAmount -= 30f / 100f;
+        Player_HP.fillAmount -= 8f / 100f;
     }
     public void Damage400V()
     {
         NPC_HP.fillAmount -= 50f / 100f;
-        Player_HP.fillAmount -= 20f / 100f;
+        Player_HP.fillAmount -= 10f / 100f;
     }
     public void Damage500V()
     {
-        NPC_HP.fillAmount -= 75f / 100f;
-        Player_HP.fillAmount -= 35f / 100f;
+        NPC_HP.fillAmount -= 70f / 100f;
+        Player_HP.fillAmount -= 20f / 100f;
 
     }
 

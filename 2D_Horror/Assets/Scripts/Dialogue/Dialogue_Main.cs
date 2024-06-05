@@ -4,12 +4,12 @@ using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement; // 씬 관리를 위해 추가
 
-public class Dialogue : MonoBehaviour
+public class Dialogue_Main : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
-    public DialogueData dialogueData; // ScriptableObject를 사용
     public GameObject Black_Panel; // Black_Panel을 참조
     public string sceneNameToActivatePanel = "Prologue"; // Black_Panel을 활성화할 씬의 이름
+    public string[] dialogue_text;
 
     public float textSpeed;
 
@@ -23,13 +23,13 @@ public class Dialogue : MonoBehaviour
         StartDialogue();
     }
 
-    void Update()
+/*    void Update()
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             NextLine();
         }
-    }
+    }*/
 
     public void StartDialogue()
     {
@@ -42,7 +42,7 @@ public class Dialogue : MonoBehaviour
         isTyping = true;
         textComponent.text = string.Empty;
 
-        string currentLine = dialogueData.lines[index].Replace("\\n", "\n");
+        string currentLine = dialogue_text[index].Replace("\\n", "\n");
 
         foreach (char c in currentLine)
         {
@@ -55,12 +55,12 @@ public class Dialogue : MonoBehaviour
 
     public void NextLine()
     {
-        if (index < dialogueData.lines.Length - 1)
+        if (index < dialogue_text.Length - 1)
         {
             if (isTyping)
             {
                 StopAllCoroutines();
-                textComponent.text = dialogueData.lines[index].Replace("\\n", "\n");
+                textComponent.text = dialogue_text[index].Replace("\\n", "\n");
                 isTyping = false;
             }
             else
