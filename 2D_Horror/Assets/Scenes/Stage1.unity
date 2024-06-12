@@ -1616,8 +1616,8 @@ GameObject:
   - component: {fileID: 364237564}
   - component: {fileID: 364237567}
   - component: {fileID: 364237566}
-  - component: {fileID: 364237568}
   - component: {fileID: 364237570}
+  - component: {fileID: 364237571}
   - component: {fileID: 364237569}
   m_Layer: 5
   m_Name: DialogueBox
@@ -1685,165 +1685,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364237563}
   m_CullTransparentMesh: 1
---- !u!114 &364237568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364237563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 559e2b4afb35da449819359b4a95b14e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 170592831}
-  lines:
-  - text: "\uAD81\uAE08\uD55C\uAC8C \uBB50\uC57C?"
-    isQuestion: 1
-    selections:
-      selection:
-      - "\uC774\uB984\uACFC \uB098\uC774\uB97C \uB9D0\uD574\uC918"
-      - "\uC131\uBCC4\uC740?"
-      - "\uC9C1\uC5C5\uC744 \uB9D0\uD574\uC918"
-      anserDialogue1:
-      - text: "\uD760.."
-        isQuestion: 0
-        selections:
-          selection: []
-          anserDialogue1: []
-          anserDialogue2: []
-          anserDialogue3: []
-      - text: "\uC774\uB984\uC740 xxx \uB098\uC774\uB294 n\uC0B4"
-        isQuestion: 1
-        selections:
-          selection:
-          - "\uC131\uBCC4\uC740?"
-          - "\uC9C1\uC5C5\uC744 \uB9D0\uD574\uC918"
-          anserDialogue1:
-          - text: "\uC131\uBCC4\uC740 ~~ "
-            isQuestion: 1
-            selections:
-              selection:
-              - "\uC9C1\uC5C5\uC744 \uB9D0\uD574\uC918"
-              anserDialogue1:
-              - text: "\uC9C1\uC5C5\uC740~~"
-                isQuestion: 0
-                selections:
-                  selection: []
-                  anserDialogue1: []
-                  anserDialogue2: []
-                  anserDialogue3: []
-              anserDialogue2: []
-              anserDialogue3: []
-          anserDialogue2:
-          - text: "\uC9C1\uC5C5\uC740~~"
-            isQuestion: 1
-            selections:
-              selection:
-              - "\uC131\uBCC4\uC740?"
-              anserDialogue1:
-              - text: "\uC131\uBCC4\uC740 ~~ \uC57C"
-                isQuestion: 0
-                selections:
-                  selection: []
-                  anserDialogue1: []
-                  anserDialogue2: []
-                  anserDialogue3: []
-              anserDialogue2: []
-              anserDialogue3: []
-          anserDialogue3: []
-      anserDialogue2:
-      - text: "\uB0A8\uC131\uC774\uC57C"
-        isQuestion: 0
-        selections:
-          selection: []
-          anserDialogue1: []
-          anserDialogue2: []
-          anserDialogue3: []
-      anserDialogue3:
-      - text: "\uD559\uC0DD\uC774\uC57C"
-        isQuestion: 0
-        selections:
-          selection: []
-          anserDialogue1: []
-          anserDialogue2: []
-          anserDialogue3: []
-  - text: "\u3141\u3141\u3141\u3141\u3141\u3141\u3141\u3141\u3141"
-    isQuestion: 1
-    selections:
-      selection:
-      - "\uC774\uB984\uACFC \uB098\uC774\uB97C \uB9D0\uD574\uC918"
-      - "\uC131\uBCC4\uC740?"
-      - "\uC9C1\uC5C5\uC744 \uB9D0\uD574\uC918"
-      anserDialogue1:
-      - text: "\uD760.."
-        isQuestion: 0
-        selections:
-          selection: []
-          anserDialogue1: []
-          anserDialogue2: []
-          anserDialogue3: []
-      - text: "\uC774\uB984\uC740 xxx \uB098\uC774\uB294 n\uC0B4"
-        isQuestion: 1
-        selections:
-          selection:
-          - "\uC131\uBCC4\uC740?"
-          - "\uC9C1\uC5C5\uC744 \uB9D0\uD574\uC918"
-          anserDialogue1:
-          - text: "\uC131\uBCC4\uC740 ~~ "
-            isQuestion: 1
-            selections:
-              selection:
-              - "\uC9C1\uC5C5\uC744 \uB9D0\uD574\uC918"
-              anserDialogue1:
-              - text: "\uC9C1\uC5C5\uC740~~"
-                isQuestion: 0
-                selections:
-                  selection: []
-                  anserDialogue1: []
-                  anserDialogue2: []
-                  anserDialogue3: []
-              anserDialogue2: []
-              anserDialogue3: []
-          anserDialogue2:
-          - text: "\uC9C1\uC5C5\uC740~~"
-            isQuestion: 1
-            selections:
-              selection:
-              - "\uC131\uBCC4\uC740?"
-              anserDialogue1:
-              - text: "\uC131\uBCC4\uC740 ~~ \uC57C"
-                isQuestion: 0
-                selections:
-                  selection: []
-                  anserDialogue1: []
-                  anserDialogue2: []
-                  anserDialogue3: []
-              anserDialogue2: []
-              anserDialogue3: []
-          anserDialogue3: []
-      anserDialogue2:
-      - text: "\uB0A8\uC131\uC774\uC57C"
-        isQuestion: 0
-        selections:
-          selection: []
-          anserDialogue1: []
-          anserDialogue2: []
-          anserDialogue3: []
-      anserDialogue3:
-      - text: "\uD559\uC0DD\uC774\uC57C"
-        isQuestion: 0
-        selections:
-          selection: []
-          anserDialogue1: []
-          anserDialogue2: []
-          anserDialogue3: []
-  textSpeed: 0.05
-  selectionButtons:
-  - {fileID: 640560096}
-  - {fileID: 1635977502}
-  - {fileID: 1828802099}
 --- !u!114 &364237569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1888,7 +1729,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 364237568}
+      - m_Target: {fileID: 364237571}
         m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
         m_MethodName: NextLine
         m_Mode: 1
@@ -1915,6 +1756,46 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
+--- !u!114 &364237571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364237563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35b7f764c78f0140b74b96dce2e99e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 170592831}
+  lines:
+  - text: ......
+    isQuestion: 0
+    selections:
+      selection: []
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+  - text: 11
+    isQuestion: 0
+    selections:
+      selection: []
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+  - text: 131
+    isQuestion: 0
+    selections:
+      selection: []
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+  textSpeed: 0
+  selectionButtons:
+  - {fileID: 640560096}
+  - {fileID: 1635977502}
+  - {fileID: 1828802099}
 --- !u!1 &422176473
 GameObject:
   m_ObjectHideFlags: 0
@@ -3322,8 +3203,8 @@ MonoBehaviour:
   - {fileID: 55446148}
   - {fileID: 865901144}
   - {fileID: 1763217246}
-  hpBar: {fileID: 1859605664}
-  myhp: {fileID: 1260705954}
+  NPC_HP: {fileID: 1859605664}
+  Player_HP: {fileID: 1260705954}
 --- !u!4 &831406620
 Transform:
   m_ObjectHideFlags: 0
