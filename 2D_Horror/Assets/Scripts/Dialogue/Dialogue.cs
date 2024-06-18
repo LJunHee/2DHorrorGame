@@ -5,6 +5,9 @@ using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Threading;
+using System;
+using UnityEngine.Events;
+using Unity.VisualScripting;
 
 public class Dialogue : MonoBehaviour
 {
@@ -15,20 +18,23 @@ public class Dialogue : MonoBehaviour
     public Button[] selectionButtons;  // 선택지 버튼들
 
     private int index;
-    private bool isTyping; // 타이핑 중인지 여부를 나타내는 변수
+    private bool isTyping = false; // 타이핑 중인지 여부를 나타내는 변수
 
     // Start is called before the first frame update
-    void Start()
+
+    public void Start()
     {
-        textComponent.text = string.Empty;
-        foreach(var button in selectionButtons)
+
+        textComponent.text = "";
+        foreach (var button in selectionButtons)
         {
             button.gameObject.SetActive(false); // 처음에 선택지 패널 숨기기
         }
-        StartDialogue();
+        index = 0;
+        NextLine();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         // 대화창을 클릭하면 다음 대화로 넘어감
@@ -38,13 +44,9 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    void StartDialogue()
-    {
-        index = 0;
-        StartCoroutine(TypeLine());
-    }
 
-    IEnumerator TypeLine()
+
+    IEnumerator TypeLine() // 한글자씩 글을 나타낸다.
     {
         isTyping = true; // 타이핑이 시작됨을 나타냄
 
@@ -53,46 +55,35 @@ public class Dialogue : MonoBehaviour
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
-
         isTyping = false; // 타이핑이 끝났음을 나타냄
-
-        // 현재 줄이 질문인지 확인하고 선택지를 보여줌
-        if (lines[index].isQuestion)
-        {
-            ShowSelections(lines[index]);
-        }
+        index++;
     }
 
     void ShowSelections(Speech speech)
     {
-        for(int i = 0; i < speech.selections.selection.Count; i++)
-        {
-            selectionButtons[i].gameObject.SetActive(true); // 처음에 선택지 패널 숨기기
-        }
+        Debug.Log(speech.text);
+
         for (int i = 0; i < selectionButtons.Length; i++)
         {
-            if (i < lines[index].selections.selection.Count)
-            {
-                selectionButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = lines[index].selections.selection[i];
-                selectionButtons[i].gameObject.SetActive(true);
-                int selectionIndex = i; // 버튼 클릭을 위한 인덱스 저장
-                selectionButtons[i].onClick.RemoveAllListeners();
-                selectionButtons[i].onClick.AddListener(() => OnSelectionClicked(selectionIndex));
-            }
-            else
-            {
-                selectionButtons[i].gameObject.SetActive(false);
-            }
+            selectionButtons[i].gameObject.SetActive(false); // 처음에 선택지 패널 숨기기
+        }
+
+        Debug.Log(speech.selections.selection.Count);
+
+        for (int i = 0; i < speech.selections.selection.Count; i++) // 선택지의 갯수만큼 버튼을 활성화 한다.
+        {
+            selectionButtons[i].gameObject.SetActive(true);
+            selectionButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = lines[index].selections.selection[i];
+
+            int selectionIndex = i; // 버튼 클릭을 위한 인덱스 저장
+            selectionButtons[i].onClick.RemoveAllListeners();
+            selectionButtons[i].onClick.AddListener(() => OnSelectionClicked(selectionIndex));
         }
     }
 
-    void OnSelectionClicked(int selectionIndex)
+    void OnSelectionClicked(int selectionIndex) // 선택지 버튼의 기능이다.
     {
-        foreach (var button in selectionButtons)
-        {
-            button.gameObject.SetActive(false); // 처음에 선택지 패널 숨기기
-        }
-        switch (selectionIndex)
+        /*switch (selectionIndex) // 분기를 추가로 넣어준다.
         {
             case 0:
                 lines.InsertRange(index + 1, lines[index].selections.anserDialogue1);
@@ -103,20 +94,13 @@ public class Dialogue : MonoBehaviour
             case 2:
                 lines.InsertRange(index + 1, lines[index].selections.anserDialogue3);
                 break;
-        }
-        index++;
-        textComponent.text = string.Empty;
-        StartCoroutine(TypeLine());
-    }
-
-    private void AddInlist(List<Speech> speeches)
-    {
-
+        }*/
+        NextLine();
     }
 
     public void NextLine()
     {
-        if (index < lines.Count)
+        if (index < lines.Count) // 이야기가 끝나지 않음
         {
             if (isTyping)
             {
@@ -124,16 +108,18 @@ public class Dialogue : MonoBehaviour
                 StopAllCoroutines();
                 textComponent.text = lines[index].text;
                 isTyping = false; // 타이핑이 끝났음을 나타냄
-
-                if (lines[index].isQuestion)
-                {
-                    ShowSelections(lines[index]);
-                }
+                index++;
             }
             else
             {
-                index++;
-                textComponent.text = string.Empty;
+                textComponent.text = "";
+                Debug.Log(lines[index].text);
+                Debug.Log(lines[index].isQuestion);
+                if (lines[index].isQuestion) // 질문인가.
+                {
+                    ShowSelections(lines[index]);
+                }
+                lines[index].ExecuteTodo();
                 StartCoroutine(TypeLine());
             }
         }
@@ -142,6 +128,7 @@ public class Dialogue : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
 }
 
 [System.Serializable]
@@ -149,6 +136,7 @@ public class Speech
 {
     public string text;
     public bool isQuestion; // 질문인가?
+    public UnityEvent todo;
     public selections selections;
 
     public Speech GetSelectAnser(string seletedAnser)
@@ -156,6 +144,13 @@ public class Speech
         Speech anser = new Speech();
         anser.text = seletedAnser;
         return anser;
+    }
+    public void ExecuteTodo()
+    {
+        if (todo != null)
+        {
+            todo.Invoke();
+        }
     }
 }
 
