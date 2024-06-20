@@ -66,7 +66,6 @@ public class Answer : MonoBehaviour
             selectionButtons[i].gameObject.SetActive(false); // 처음에 선택지 패널 숨기기
         }
 
-        Debug.Log(speech.selections.selection.Count);
 
         for (int i = 0; i < speech.selections.selection.Count; i++) // 선택지의 갯수만큼 버튼을 활성화 한다.
         {
@@ -81,18 +80,27 @@ public class Answer : MonoBehaviour
 
     void OnSelectionClicked(int selectionIndex) // 선택지 버튼의 기능이다.
     {
-        /*switch (selectionIndex) // 분기를 추가로 넣어준다.
+        if(isTyping)
+        {
+            return;
+        }
+
+        Debug.Log(selectionIndex);
+        Debug.Log("id : "+index);
+        switch (selectionIndex) // 분기를 추가로 넣어준다.
         {
             case 0:
-                lines.InsertRange(index + 1, lines[index].selections.anserDialogue1);
+                lines.InsertRange(index, lines[index - 1].selections.anserDialogue1);
                 break;
             case 1:
-                lines.InsertRange(index + 1, lines[index].selections.anserDialogue2);
+                lines.InsertRange(index, lines[index - 1].selections.anserDialogue2);
                 break;
             case 2:
-                lines.InsertRange(index + 1, lines[index].selections.anserDialogue3);
+                lines.InsertRange(index, lines[index - 1].selections.anserDialogue3);
                 break;
-        }*/
+
+           
+        }
         NextLine();
     }
 
@@ -111,8 +119,6 @@ public class Answer : MonoBehaviour
             else
             {
                 textComponent.text = "";
-                Debug.Log(lines[index].text);
-                Debug.Log(lines[index].isQuestion);
                 if (lines[index].isQuestion) // 질문인가.
                 {
                     ShowSelections(lines[index]);
@@ -160,8 +166,6 @@ public struct selections
     public List<Speech> anserDialogue1; // 첫번째를 선택했을 시 나오는 대사들
     public List<Speech> anserDialogue2;
     public List<Speech> anserDialogue3;
-    public List<Speech> anserDialogue4;
-    public List<Speech> anserDialogue5;
     
 }
 
