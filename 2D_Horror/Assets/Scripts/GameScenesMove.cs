@@ -15,10 +15,45 @@ public class GameScenesMove : MonoBehaviour
     {
         SceneManager.LoadScene("Prologue");
     }
-
-    public void GameScene_Stage()
+    public void GameScene_GameOver()
     {
-        SceneManager.LoadScene("Scene1");
+        SceneManager.LoadScene("GameOver");
     }
+
+    public void GameScene_Stage01()
+    {
+        SceneManager.LoadScene("Stage1");
+    }
+
+    public void GameScene_Stage02()
+    {
+        SceneManager.LoadScene("Stage2");
+    }
+
+    public void GameScene_Stage03()
+    {
+        SceneManager.LoadScene("Stage3");
+    }
+
+    public void GameScene_Stage04()
+    {
+        SceneManager.LoadScene("Stage4");
+    }
+
+    public void GameScene_Stage05()
+    {
+        SceneManager.LoadScene("Stage5");
+    }
+
+    public void GameScene_Stage06()
+    {
+        SceneManager.LoadScene("Stage6");
+    }
+
+    public void GameScene_Stage07()
+    {
+        SceneManager.LoadScene("Stage7");
+    }
+
 
 }

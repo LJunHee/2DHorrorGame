@@ -112,6 +112,12 @@ public class Dialogue_Prologue : MonoBehaviour
                         }
                         break;
 
+                    case 32:
+                        Debug.Log("finish");
+                        SceneManager.LoadScene("Stage1");
+                        return;
+
+
                 }
 
                 index++;

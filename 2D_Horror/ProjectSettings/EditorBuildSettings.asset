@@ -6,7 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-<<<<<<< Updated upstream
     path: Assets/Scenes/Start.unity
     guid: 563cd7936dd24c44db273824e8f3e7e2
   - enabled: 1
@@ -16,9 +15,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Prologue.unity
     guid: 53d494db18d7ddd4fb76e2201ec8a77a
   - enabled: 1
-    path: Assets/Scenes/Scene1.unity
-=======
-    path: Assets/Scenes/MainScene.unity
->>>>>>> Stashed changes
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Stage1.unity
+    guid: 35917795253f5af45b964b47e5771a28
+  - enabled: 1
+    path: Assets/Scenes/Stage2.unity
+    guid: f1065b2444ca84d409f1600a813a194c
+  - enabled: 1
+    path: Assets/Scenes/Stage3.unity
+    guid: ee9070899f5f8f04ea2bbc530c9a4338
+  - enabled: 1
+    path: Assets/Scenes/Stage4.unity
+    guid: e21497c95febd0c46a4b14cdae6211be
+  - enabled: 1
+    path: Assets/Scenes/Stage5.unity
+    guid: 3a3119d4227f4af42aa271730d8dac2d
+  - enabled: 1
+    path: Assets/Scenes/Stage6.unity
+    guid: 06c71393a8890a342ad56002ecd0defe
+  - enabled: 1
+    path: Assets/Scenes/Stage7.unity
+    guid: 9a87abfc80e6b804bb5276ebbd4aa971
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 2855e4654ef5f8145bd761999ed612c5
   m_configObjects: {}
