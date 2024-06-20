@@ -9,7 +9,7 @@ using System;
 using UnityEngine.Events;
 using Unity.VisualScripting;
 
-public class Dialogue : MonoBehaviour
+public class Answer : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public List<Speech> lines;
