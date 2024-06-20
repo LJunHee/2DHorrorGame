@@ -61,8 +61,6 @@ public class Dialogue : MonoBehaviour
 
     void ShowSelections(Speech speech)
     {
-        Debug.Log(speech.text);
-
         for (int i = 0; i < selectionButtons.Length; i++)
         {
             selectionButtons[i].gameObject.SetActive(false); // 처음에 선택지 패널 숨기기
@@ -162,6 +160,9 @@ public struct selections
     public List<Speech> anserDialogue1; // 첫번째를 선택했을 시 나오는 대사들
     public List<Speech> anserDialogue2;
     public List<Speech> anserDialogue3;
+    public List<Speech> anserDialogue4;
+    public List<Speech> anserDialogue5;
+    
 }
 
 
