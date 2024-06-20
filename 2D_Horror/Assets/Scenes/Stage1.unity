@@ -1754,6 +1754,7 @@ GameObject:
   - component: {fileID: 364237570}
   - component: {fileID: 364237571}
   - component: {fileID: 364237569}
+  - component: {fileID: 364237572}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -1910,18 +1911,8 @@ MonoBehaviour:
     todo:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1648788279}
-          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
-          m_MethodName: setstart
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: "\uC9C8\uBB38\uC744 \uC2DC\uC791\uD574.."
-            m_BoolArgument: 0
-          m_CallState: 2
+        - {m_Target: {fileID: 1648788279}, m_TargetAssemblyTypeName: Chat, Assembly-CSharp, m_MethodName: setstart, m_Mode: 5, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: "\uC9C8\uBB38\uC744 \uC2DC\uC791\uD574..", m_BoolArgument: 0}, m_CallState: 2}
+      m_CallsDirty: 1
     selections:
       selection:
       - "\uC774\uAC83\uC740 \uC2E4\uD5D8\uC2E4\uC5D0\uC11C \uC790\uC8FC \uC4F0\uB294\uAC00?"
@@ -1935,54 +1926,11 @@ MonoBehaviour:
     todo:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1648788277}
-          m_TargetAssemblyTypeName: Profile, Assembly-CSharp
-          m_MethodName: setname
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: "\uC774\uB984 : xx"
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1648788277}
-          m_TargetAssemblyTypeName: Profile, Assembly-CSharp
-          m_MethodName: setage
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: "\uB098\uC774 : 18"
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1648788277}
-          m_TargetAssemblyTypeName: Profile, Assembly-CSharp
-          m_MethodName: setsex
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: "\uC131\uBCC4 : \uB0A8\uC131"
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1648788279}
-          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
-          m_MethodName: set1
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38 : 9\uAC1C"
-            m_BoolArgument: 0
-          m_CallState: 2
+        - {m_Target: {fileID: 1648788277}, m_TargetAssemblyTypeName: Profile, Assembly-CSharp, m_MethodName: setname, m_Mode: 5, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: "\uC774\uB984 : xx", m_BoolArgument: 0}, m_CallState: 2}
+        - {m_Target: {fileID: 1648788277}, m_TargetAssemblyTypeName: Profile, Assembly-CSharp, m_MethodName: setage, m_Mode: 5, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: "\uB098\uC774 : 18", m_BoolArgument: 0}, m_CallState: 2}
+        - {m_Target: {fileID: 1648788277}, m_TargetAssemblyTypeName: Profile, Assembly-CSharp, m_MethodName: setsex, m_Mode: 5, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: "\uC131\uBCC4 : \uB0A8\uC131", m_BoolArgument: 0}, m_CallState: 2}
+        - {m_Target: {fileID: 1648788279}, m_TargetAssemblyTypeName: Chat, Assembly-CSharp, m_MethodName: set1, m_Mode: 5, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38 : 9\uAC1C", m_BoolArgument: 0}, m_CallState: 2}
+      m_CallsDirty: 1
     selections:
       selection:
       - "\uC0DD\uCCB4\uC2E4\uD5D8\uACFC  \uAD00\uB828\uC788\uB294\uAC00?"
@@ -1993,6 +1941,7 @@ MonoBehaviour:
         todo:
           m_PersistentCalls:
             m_Calls: []
+          m_CallsDirty: 1
         selections:
           selection: []
           anserDialogue1: []
@@ -2006,6 +1955,7 @@ MonoBehaviour:
         todo:
           m_PersistentCalls:
             m_Calls: []
+          m_CallsDirty: 1
         selections:
           selection: []
           anserDialogue1: []
@@ -2020,30 +1970,9 @@ MonoBehaviour:
     todo:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1648788277}
-          m_TargetAssemblyTypeName: Profile, Assembly-CSharp
-          m_MethodName: setjob
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: "\uC9C1\uC5C5: \uD559\uC0DD"
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1648788279}
-          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
-          m_MethodName: set1
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38:8\uAC1C"
-            m_BoolArgument: 0
-          m_CallState: 2
+        - {m_Target: {fileID: 1648788277}, m_TargetAssemblyTypeName: Profile, Assembly-CSharp, m_MethodName: setjob, m_Mode: 5, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: "\uC9C1\uC5C5: \uD559\uC0DD", m_BoolArgument: 0}, m_CallState: 2}
+        - {m_Target: {fileID: 1648788279}, m_TargetAssemblyTypeName: Chat, Assembly-CSharp, m_MethodName: set1, m_Mode: 5, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38:8\uAC1C", m_BoolArgument: 0}, m_CallState: 2}
+      m_CallsDirty: 1
     selections:
       selection:
       - "\uC720\uB9AC\uB85C \uB418\uC5B4\uC788\uB294\uAC00?"
@@ -2057,18 +1986,8 @@ MonoBehaviour:
     todo:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1648788279}
-          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
-          m_MethodName: set1
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38:7\uAC1C"
-            m_BoolArgument: 0
-          m_CallState: 2
+        - {m_Target: {fileID: 1648788279}, m_TargetAssemblyTypeName: Chat, Assembly-CSharp, m_MethodName: set1, m_Mode: 5, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38:7\uAC1C", m_BoolArgument: 0}, m_CallState: 2}
+      m_CallsDirty: 1
     selections:
       selection:
       - "\uAC00\uC5F4\uD560\uB54C \uC0AC\uC6A9\uD558\uB294\uAC00?"
@@ -2082,18 +2001,8 @@ MonoBehaviour:
     todo:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1648788279}
-          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
-          m_MethodName: set1
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38:6\uAC1C"
-            m_BoolArgument: 0
-          m_CallState: 2
+        - {m_Target: {fileID: 1648788279}, m_TargetAssemblyTypeName: Chat, Assembly-CSharp, m_MethodName: set1, m_Mode: 5, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38:6\uAC1C", m_BoolArgument: 0}, m_CallState: 2}
+      m_CallsDirty: 1
     selections:
       selection:
       - "\uC774 \uBB3C\uCCB4\uB294 \uD2B9\uC720\uC758 \uB0C4\uC0C8\uAC00 \uC788\uB294\uAC00?"
@@ -2107,6 +2016,73 @@ MonoBehaviour:
     todo:
       m_PersistentCalls:
         m_Calls:
+        - {m_Target: {fileID: 1648788279}, m_TargetAssemblyTypeName: Chat, Assembly-CSharp, m_MethodName: set1, m_Mode: 5, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38:5\uAC1C", m_BoolArgument: 0}, m_CallState: 2}
+      m_CallsDirty: 1
+    selections:
+      selection:
+      - "\uC774 \uBB3C\uCCB4\uB294  \uC2E4\uD5D8\uC2E4 \uBCF4\uC548\uC744 \uC704\uD574
+        \uC0AC\uC6A9\uD558\uB294\uAC00?"
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+      anserDialogue4: []
+      anserDialogue5: []
+  - text: "\uC544\uB2D9\uB2C8\uB2E4!"
+    isQuestion: 1
+    todo:
+      m_PersistentCalls:
+        m_Calls:
+        - {m_Target: {fileID: 1648788279}, m_TargetAssemblyTypeName: Chat, Assembly-CSharp, m_MethodName: set1, m_Mode: 5, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38: 4\uAC1C", m_BoolArgument: 0}, m_CallState: 2}
+      m_CallsDirty: 1
+    selections:
+      selection:
+      - "\uACE0\uCCB4\uB098 \uC561\uCCB4\uB97C \uB2F4\uC744\uC218 \uC788\uB294\uAC00?"
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+      anserDialogue4: []
+      anserDialogue5: []
+  - text: "\uC608, \uB9DE\uC2B5\uB2C8\uB2E4"
+    isQuestion: 1
+    todo:
+      m_PersistentCalls:
+        m_Calls:
+        - {m_Target: {fileID: 1648788279}, m_TargetAssemblyTypeName: Chat, Assembly-CSharp, m_MethodName: set1, m_Mode: 5, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: "\uB0A8\uC740 \uC9C8\uBB38: 3", m_BoolArgument: 0}, m_CallState: 2}
+      m_CallsDirty: 1
+    selections:
+      selection:
+      - "\uD6C4\uB77C\uC774\uB4DC"
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+      anserDialogue4: []
+      anserDialogue5: []
+  textSpeed: 0.1
+  selectionButtons:
+  - {fileID: 640560096}
+  - {fileID: 1635977502}
+  - {fileID: 1828802099}
+  index: 0
+  isTyping: 0
+--- !u!114 &364237572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364237563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8282ab636d166847885da429dfe1933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 170592831}
+  lines:
+  - text: .....
+    isQuestion: 1
+    todo:
+      m_PersistentCalls:
+        m_Calls:
         - m_Target: {fileID: 1648788279}
           m_TargetAssemblyTypeName: Chat, Assembly-CSharp
           m_MethodName: set1
@@ -2116,39 +2092,313 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38:5\uAC1C"
+            m_StringArgument: "\uC9C8\uBB38 \uC2DC\uC791!"
             m_BoolArgument: 0
           m_CallState: 2
     selections:
       selection:
-      - "\uC774 \uBB3C\uCCB4\uB294 \uACE0\uCCB4\uB098 \uC561\uCCB4\uB97C \uB2F4\uC744\uC218
-        \uC788\uB294\uAC00?"
+      - "\uC6B0\uB9AC \uC2E4\uD5D8\uC2E4\uC5D0\uC11C \uC790\uC8FC \uC0AC\uC6A9\uD558\uB294\uAC00?"
       anserDialogue1: []
       anserDialogue2: []
       anserDialogue3: []
       anserDialogue4: []
       anserDialogue5: []
-  - text: "\uC608, \uB9DE\uC2B5\uB2C8\uB2E4"
+  - text: "\uB124, \uB9DE\uC2B5\uB2C8\uB2E4"
     isQuestion: 1
     todo:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1648788279}
+          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+          m_MethodName: set1
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38: 9\uAC1C"
+            m_BoolArgument: 0
+          m_CallState: 2
     selections:
       selection:
-      - "\uD6C4\uB77C\uC774\uB4DC"
+      - "\uC0DD\uCCB4\uC2E4\uD5D8\uC6A9\uC778\uAC00?"
       anserDialogue1: []
       anserDialogue2: []
       anserDialogue3: []
       anserDialogue4: []
       anserDialogue5: []
-  - text: "\uC608, \uB9DE\uC2B5\uB2C8\uB2E4"
+  - text: "\uC544\uB2D9\uB2C8\uB2E4!"
     isQuestion: 1
     todo:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1648788279}
+          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+          m_MethodName: set1
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38: 8\uAC1C"
+            m_BoolArgument: 0
+          m_CallState: 2
     selections:
       selection:
-      - "\uD6C4\uB77C\uC774\uB4DC"
+      - "\uAC00\uC5F4\uD560\uB54C \uC4F0\uC774\uB294\uAC00?"
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+      anserDialogue4: []
+      anserDialogue5: []
+  - text: "\uC544\uB2D9\uB2C8\uB2E4!"
+    isQuestion: 1
+    todo:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1648788279}
+          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+          m_MethodName: set1
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38: 7\uAC1C"
+            m_BoolArgument: 0
+          m_CallState: 2
+    selections:
+      selection:
+      - "\uD2B9\uC720\uC758 \uD5A5\uC774 \uB098\uB294\uAC00?"
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+      anserDialogue4: []
+      anserDialogue5: []
+  - text: "\uC544\uB2D9\uB2C8\uB2E4!"
+    isQuestion: 1
+    todo:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1648788279}
+          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+          m_MethodName: set1
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38: 6\uAC1C"
+            m_BoolArgument: 0
+          m_CallState: 2
+    selections:
+      selection:
+      - "\uC720\uB9AC\uB85C \uB418\uC5B4\uC5C8\uB294\uAC00?"
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+      anserDialogue4: []
+      anserDialogue5: []
+  - text: "\uB124, \uB9DE\uC2B5\uB2C8\uB2E4"
+    isQuestion: 1
+    todo:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1648788279}
+          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+          m_MethodName: set1
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38: 5\uAC1C"
+            m_BoolArgument: 0
+          m_CallState: 2
+    selections:
+      selection:
+      - "\uC0C9\uC0C1\uC774 \uC5C6\uB294\uAC00?"
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+      anserDialogue4: []
+      anserDialogue5: []
+  - text: "\uB124, \uB9DE\uC2B5\uB2C8\uB2E4"
+    isQuestion: 1
+    todo:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1648788279}
+          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+          m_MethodName: set1
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38: 4\uAC1C"
+            m_BoolArgument: 0
+          m_CallState: 2
+    selections:
+      selection:
+      - "\uBB34\uC5B8\uAC00\uB97C \uC555\uCD95 \uC2DC\uD0AC\uC218 \uC788\uB294\uAC00?"
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+      anserDialogue4: []
+      anserDialogue5: []
+  - text: "\uC544\uB2D9\uB2C8\uB2E4"
+    isQuestion: 1
+    todo:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1648788279}
+          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+          m_MethodName: set1
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38: 3\uAC1C"
+            m_BoolArgument: 0
+          m_CallState: 2
+    selections:
+      selection:
+      - "\uC774 \uBB3C\uCCB4\uC5D0 \uB208\uAE08\uC774 \uC788\uB294\uAC00?"
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+      anserDialogue4: []
+      anserDialogue5: []
+  - text: "\uB124, \uB9DE\uC2B5\uB2C8\uB2E4."
+    isQuestion: 1
+    todo:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1648788279}
+          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+          m_MethodName: set1
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38: 2\uAC1C"
+            m_BoolArgument: 0
+          m_CallState: 2
+    selections:
+      selection:
+      - "\uB69C\uAED1\uC774\uB098 \uB9C8\uAC1C\uB97C \uC0AC\uC6A9\uD558\uB294\uAC00?"
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+      anserDialogue4: []
+      anserDialogue5: []
+  - text: "\uB124, \uB9DE\uC2B5\uB2C8\uB2E4."
+    isQuestion: 1
+    todo:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1648788279}
+          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+          m_MethodName: set1
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "\uB0A8\uC740\uC9C8\uBB38: 1\uAC1C"
+            m_BoolArgument: 0
+          m_CallState: 2
+    selections:
+      selection:
+      - "\uC774 \uC0AC\uBB3C \uBA85\uCE6D\uC740 6\uAE00\uC790\uC778\uAC00?"
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+      anserDialogue4: []
+      anserDialogue5: []
+  - text: "\uB124, \uB9DE\uC2B5\uB2C8\uB2E4."
+    isQuestion: 1
+    todo:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1648788279}
+          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+          m_MethodName: set1
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "\uACFC\uC5F0 \uC815\uB2F5\uC740?!"
+            m_BoolArgument: 0
+          m_CallState: 2
+    selections:
+      selection:
+      - "\uC0BC\uAC01\uD50C\uB77C\uC2A4\uD06C"
+      - "\uC2A4\uD3EC\uC774\uB4DC"
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+      anserDialogue4: []
+      anserDialogue5: []
+  - text: ..!!
+    isQuestion: 1
+    todo:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1648788279}
+          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+          m_MethodName: set1
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "\uC815\uB2F5!!"
+            m_BoolArgument: 0
+          m_CallState: 2
+    selections:
+      selection:
+      - "\uC0BC\uAC01\uD50C\uB77C\uC2A4\uD06C"
+      - "\uC2A4\uD3EC\uC774\uB4DC"
+      anserDialogue1: []
+      anserDialogue2: []
+      anserDialogue3: []
+      anserDialogue4: []
+      anserDialogue5: []
+  - text: .........
+    isQuestion: 1
+    todo:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1648788279}
+          m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+          m_MethodName: set1
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "\uD2C0\uB838\uC5B4!!!!!!!"
+            m_BoolArgument: 0
+          m_CallState: 2
+    selections:
+      selection: []
       anserDialogue1: []
       anserDialogue2: []
       anserDialogue3: []
@@ -6378,18 +6628,8 @@ MonoBehaviour:
     todo:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 0, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
+      m_CallsDirty: 1
     selections:
       selection:
       - "\uC774\uB984\uACFC \uB098\uC774, \uC131\uBCC4\uC744 \uB9D0\uD574\uBD10"
@@ -6400,6 +6640,7 @@ MonoBehaviour:
         todo:
           m_PersistentCalls:
             m_Calls: []
+          m_CallsDirty: 1
         selections:
           selection: []
           anserDialogue1: []
@@ -6415,18 +6656,8 @@ MonoBehaviour:
     todo:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 0, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
+      m_CallsDirty: 1
     selections:
       selection:
       - "\uB108\uC758 \uC9C1\uC5C5\uC744 \uB9D0\uD574\uBCFC\uB798?"
@@ -6437,6 +6668,7 @@ MonoBehaviour:
         todo:
           m_PersistentCalls:
             m_Calls: []
+          m_CallsDirty: 1
         selections:
           selection: []
           anserDialogue1: []
@@ -6451,6 +6683,8 @@ MonoBehaviour:
   selectionButtons:
   - {fileID: 640560096}
   - {fileID: 1635977502}
+  index: 0
+  isTyping: 0
 --- !u!1 &1570338783
 GameObject:
   m_ObjectHideFlags: 0
