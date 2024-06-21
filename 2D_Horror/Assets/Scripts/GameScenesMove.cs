@@ -18,7 +18,8 @@ public class GameScenesMove : MonoBehaviour
 
     public void GameScene_Stage()
     {
-        SceneManager.LoadScene("Scene1");
+        SceneManager.LoadScene("Stage1");
     }
+
 
 }
